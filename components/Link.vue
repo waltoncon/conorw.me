@@ -1,8 +1,37 @@
 <template>
-    <a
-        inline-block px-3 py-2 bg-indigo-500 text-white hover:ring-3 hover:ring-indigo-200 active:bg-indigo-600 rounded-md
-        w-full flex flex-row justify-center items-center gap-2 leading-none
-    >
-        <slot />
-    </a>
+    <a class="link"><slot /></a>
 </template>
+
+<style scoped>
+.link {
+    @apply
+        px-3
+        py-2
+        h-8
+        w-full
+        rounded-md
+        flex
+        flex-row
+        justify-start
+        items-center
+        gap-2
+        leading-none
+
+        text-white
+
+        bg-gradient-to-br
+        from-indigo-600
+        to-indigo-700
+
+        active:from-indigo-700
+        active:to-indigo-800
+
+        hover:ring-3
+        hover:ring-indigo-200
+
+        focus:outline-none
+        focus:ring-3
+        focus:ring-indigo-200
+    ;
+}
+</style>
