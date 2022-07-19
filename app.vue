@@ -5,10 +5,10 @@
                 Conor Walton
             </h1>
             <Link href="mailto:contact@conorw.me">
-                contact@conorw.me
+                <div class="i-mdi:email" /> contact@conorw.me
             </Link>
             <Link href="https://github.com/waltoncon">
-                <div class="i-mdi-github" /> waltoncon
+                <div class="i-mdi:github" /> waltoncon
             </Link>
         </div>
     </div>
