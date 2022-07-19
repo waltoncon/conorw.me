@@ -6,4 +6,15 @@ export default defineNuxtConfig({
         strict: true,
         shim: false,
     },
+    modules: [
+        '@unocss/nuxt',
+    ],
+    unocss: {
+        preflight: true,
+    },
+    meta: {
+        link: [
+            { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+        ],
+    },
 });
