@@ -1,8 +1,8 @@
 <template>
-    <a class="link"><slot /></a>
+  <a class="link"><slot /></a>
 </template>
 
-<style scoped>
+<style scoped lang="postcss">
 .link {
     @apply
         px-3

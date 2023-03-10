@@ -7,16 +7,23 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@unocss/nuxt": "^0.41.1",
-    "@vueuse/core": "^8.7.5",
-    "@vueuse/nuxt": "^8.7.5",
-    "@waltoncon/eslint-config": "^0.4.1",
-    "eslint": "^8.18.0",
-    "nuxt": "3.0.0-rc.4",
-    "typescript": "^4.7.4"
+    "@iconify-json/mdi": "^1.1.45",
+    "@unocss/nuxt": "^0.50.4",
+    "@waltoncon/eslint-config": "^0.5.4",
+    "eslint": "^8.33.0",
+    "nuxt": "3.2.3",
+    "typescript": "^4.9.5"
   },
-  "dependencies": {
-    "@iconify-json/mdi": "^1.1.29",
-    "@unocss/reset": "^0.44.4"
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "vite",
+        "vue",
+        "webpack"
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": "@waltoncon"
   }
 }
