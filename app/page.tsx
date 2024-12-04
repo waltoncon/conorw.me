@@ -19,7 +19,7 @@ export default function Home() {
             </Button>
             <div className="flex flex-row gap-px">
               <Button asChild className="flex-1 justify-start rounded-r-none">
-                <a href="https://www.linkedin.com/conorwalton">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/conorwalton/">LinkedIn</a>
               </Button>
               <Button asChild className="rounded-l-none" size="icon">
                 <a href="https://www.linkedin.com/messaging/compose/?recipient=conorwalton">
