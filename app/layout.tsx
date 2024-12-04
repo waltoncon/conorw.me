@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Funnel_Sans } from "next/font/google";
 import "./globals.css";
+import { CSPostHogProvider } from "./providers";
 
 const funnelSans = Funnel_Sans({
   variable: "--font-funnel-sans",
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${funnelSans.variable} antialiased`}>{children}</body>
+      <CSPostHogProvider>
+        <body className={`${funnelSans.variable} antialiased`}>{children}</body>
+      </CSPostHogProvider>
     </html>
   );
 }
