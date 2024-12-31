@@ -1,3 +1,4 @@
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,8 +32,9 @@ export default function Home() {
     <div className="grid min-h-screen items-end gap-16 p-4 pb-20 font-[family-name:var(--font-funnel-sans)] md:items-center md:justify-center md:p-8">
       <main className="flex flex-col items-center md:flex-row md:items-start md:gap-10">
         <div className="flex w-full max-w-80 flex-col gap-3 md:w-60">
-          <div className="flex h-20 items-end">
+          <div className="flex h-20 items-end justify-between">
             <h1 className="text-3xl">Conor Walton</h1>
+            <ThemeToggle />
           </div>
           <div className="flex flex-col gap-2">
             <Button asChild className="w-full justify-start">
