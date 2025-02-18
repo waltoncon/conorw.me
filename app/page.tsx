@@ -20,10 +20,19 @@ const projects = [
   },
   {
     name: "Doclet",
-    description: "View documentation offline.",
+    description:
+      "View documentation offline. The newest version built with Vite for better SPA and offline support.",
+    href: "https://doclet-app.vercel.app/",
+    prettyUrl: "doclet-app.vercel.app",
+    badge: "pre-alpha",
+  },
+  {
+    name: "Doclet",
+    description:
+      "View documentation offline. An early version built with NextJS.",
     href: "https://doclet.cew.sh",
     prettyUrl: "doclet.cew.sh",
-    badge: "pre-alpha",
+    badge: "outdated",
   },
 ];
 
