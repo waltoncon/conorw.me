@@ -2,8 +2,14 @@ import {
   type IconType,
   SiBun,
   SiBunHex,
+  SiDrizzle,
+  SiDrizzleHex,
   SiJavascript,
   SiJavascriptHex,
+  SiMarkdown,
+  SiMarkdownHex,
+  SiNextdotjs,
+  SiNextdotjsHex,
   SiNodedotjs,
   SiNodedotjsHex,
   SiNuxt,
@@ -18,10 +24,14 @@ import {
   SiTailwindcssHex,
   SiTypescript,
   SiTypescriptHex,
+  SiVercel,
+  SiVercelHex,
   SiVite,
   SiViteHex,
   SiVuedotjs,
   SiVuedotjsHex,
+  SiZod,
+  SiZodHex,
 } from "@icons-pack/react-simple-icons";
 import { SVGProps } from "react";
 import { TriggerDotDevIcon } from "./icons/trigger-dot-dev";
@@ -43,15 +53,32 @@ export const builtWith = createBuiltWith({
     color: SiBunHex,
     url: "https://bun.sh",
   },
+  drizzleorm: {
+    name: "Drizzle ORM",
+    icon: SiDrizzle,
+    color: SiDrizzleHex,
+    url: "https://orm.drizzle.team",
+  },
   javascript: {
     name: "JavaScript",
     icon: SiJavascript,
     color: SiJavascriptHex,
   },
+  markdown: {
+    name: "Markdown",
+    icon: SiMarkdown,
+    color: SiMarkdownHex,
+  },
   nodejs: {
     name: "Node.JS",
     icon: SiNodedotjs,
     color: SiNodedotjsHex,
+  },
+  nextjs: {
+    name: "Next.js",
+    icon: SiNextdotjs,
+    color: SiNextdotjsHex,
+    url: "https://nextjs.org",
   },
   nuxt: {
     name: "Nuxt",
@@ -94,6 +121,12 @@ export const builtWith = createBuiltWith({
     icon: SiTypescript,
     color: SiTypescriptHex,
   },
+  vercel: {
+    name: "Vercel",
+    icon: SiVercel,
+    color: SiVercelHex,
+    url: "https://vercel.com/home",
+  },
   vite: {
     name: "Vite",
     icon: SiVite,
@@ -105,6 +138,12 @@ export const builtWith = createBuiltWith({
     icon: SiVuedotjs,
     color: SiVuedotjsHex,
     url: "https://vuejs.org",
+  },
+  zod: {
+    name: "Zod",
+    icon: SiZod,
+    color: SiZodHex,
+    url: "https://zod.dev",
   },
 });
 
