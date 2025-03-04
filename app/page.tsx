@@ -1,17 +1,9 @@
 import ExtLink from "@/components/ext-link";
+import ProjectCard, { Project } from "@/components/project/project-card";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { MessageSquareIcon } from "lucide-react";
 
-const projects = [
+const projects: Project[] = [
   {
     name: "Utilities",
     description: "A collection of client-side utilities.",
@@ -66,34 +58,7 @@ export default function Home() {
             <h2 className="text-xl">Projects</h2>
           </div>
           {projects.map((project, index) => (
-            <Card key={index} className="max-w-xs shadow-none">
-              <CardHeader className="flex-row justify-between space-y-0 p-4 pb-0">
-                <CardTitle>{project.name}</CardTitle>
-                {project.badge && (
-                  <Badge
-                    className="ml-2 h-4 px-1.5 py-0 text-xs"
-                    variant="outline"
-                  >
-                    {project.badge}
-                  </Badge>
-                )}
-              </CardHeader>
-              <CardContent className="flex flex-row items-baseline gap-4 p-4 py-2">
-                <CardDescription>{project.description}</CardDescription>
-              </CardContent>
-              <CardFooter className="p-4 pt-0">
-                <Button
-                  asChild
-                  className="ml-auto justify-start"
-                  size="sm"
-                  variant="ghost"
-                >
-                  <a href={project.href} target="_blank">
-                    Go to {project.prettyUrl}
-                  </a>
-                </Button>
-              </CardFooter>
-            </Card>
+            <ProjectCard project={project} key={index} />
           ))}
         </div>
       </main>
