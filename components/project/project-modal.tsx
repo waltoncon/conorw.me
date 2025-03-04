@@ -7,10 +7,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Project } from "@/lib/project-schema";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import BuiltWithBadge from "./build-with-badge";
-import { Project } from "./project-card";
 
 export function ProjectModal({ project }: { project: Project }) {
   return (
@@ -30,7 +30,10 @@ export function ProjectModal({ project }: { project: Project }) {
           </DialogDescription>
         </DialogHeader>
         {project.description ? (
-          <DialogDescription>{project.description}</DialogDescription>
+          <DialogDescription
+            className="prose dark:prose-invert"
+            dangerouslySetInnerHTML={{ __html: project.description }}
+          />
         ) : null}
         <div className="flex flex-row gap-2 sm:justify-start">
           {project.builtWith?.map((builtWithKey) => {

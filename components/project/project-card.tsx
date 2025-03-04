@@ -8,19 +8,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { BuiltWithKey } from "@/lib/built-with";
+import { Project } from "@/lib/project-schema";
 import Link from "next/link";
 import { ProjectModal } from "./project-modal";
-
-export interface Project {
-  name: string;
-  summary?: string;
-  description?: string;
-  href: string;
-  prettyUrl: string;
-  badge?: string;
-  builtWith?: BuiltWithKey[];
-}
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (

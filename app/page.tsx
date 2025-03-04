@@ -1,28 +1,12 @@
 import ExtLink from "@/components/ext-link";
-import ProjectCard, { Project } from "@/components/project/project-card";
+import ProjectCard from "@/components/project/project-card";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { loadProjects } from "@/lib/load-projects";
 import { MessageSquareIcon } from "lucide-react";
 
-const projects: Project[] = [
-  {
-    name: "Utilities",
-    summary: "A collection of client-side utilities.",
-    href: "https://www.cew.sh/",
-    prettyUrl: "cew.sh",
-    builtWith: ["vue", "nuxt"],
-  },
-  {
-    name: "Doclet",
-    summary:
-      "View documentation offline. Built with Vite, React, and SurrealDB.",
-    href: "https://doclet.cew.sh",
-    prettyUrl: "doclet-app.vercel.app",
-    badge: "pre-alpha",
-    builtWith: ["react", "vite", "surrealdb", "triggerdotdev"],
-  },
-];
+export default async function Home() {
+  const projects = await loadProjects();
 
-export default function Home() {
   return (
     <div className="grid min-h-screen items-end gap-16 p-4 pb-20 font-[family-name:var(--font-funnel-sans)] md:items-center md:justify-center md:p-8">
       <main className="flex flex-col items-center md:flex-row md:items-start md:gap-10">
