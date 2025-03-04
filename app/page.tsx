@@ -1,6 +1,6 @@
+import ExtLink from "@/components/ext-link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -38,28 +38,26 @@ export default function Home() {
             <ThemeToggle />
           </div>
           <div className="flex flex-col gap-2">
-            <Button asChild className="w-full justify-start">
-              <a href="https://github.com/waltoncon" target="_blank">
-                GitHub
-              </a>
-            </Button>
+            <ExtLink
+              className="w-full justify-start"
+              href="https://github.com/waltoncon"
+            >
+              GitHub
+            </ExtLink>
             <div className="flex flex-row gap-px">
-              <Button asChild className="flex-1 justify-start rounded-r-none">
-                <a
-                  href="https://www.linkedin.com/in/conorwalton/"
-                  target="_blank"
-                >
-                  LinkedIn
-                </a>
-              </Button>
-              <Button asChild className="rounded-l-none" size="icon">
-                <a
-                  href="https://www.linkedin.com/messaging/compose/?recipient=conorwalton"
-                  target="_blank"
-                >
-                  <MessageSquareIcon />
-                </a>
-              </Button>
+              <ExtLink
+                className="flex-1 justify-start rounded-r-none"
+                href="https://www.linkedin.com/in/conorwalton/"
+              >
+                LinkedIn
+              </ExtLink>
+              <ExtLink
+                className="rounded-l-none"
+                size="icon"
+                href="https://www.linkedin.com/messaging/compose/?recipient=conorwalton"
+              >
+                <MessageSquareIcon />
+              </ExtLink>
             </div>
           </div>
         </div>
