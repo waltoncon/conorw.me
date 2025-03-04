@@ -1,5 +1,6 @@
 import { readdir, readFile } from "node:fs/promises";
 import { resolve } from "node:path";
+import rehypeRewrite from "rehype-rewrite";
 import rehypeStringify from "rehype-stringify";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
@@ -17,6 +18,18 @@ async function parseMarkdown(value: string) {
     .use(() => (tree, file) => matter(file))
     .use(remarkGfm)
     .use(remarkRehype)
+    .use(rehypeRewrite, {
+      rewrite: (node) => {
+        if (
+          node.type === "element" &&
+          node.tagName === "a" &&
+          node.properties?.href
+        ) {
+          node.properties.target = "_blank";
+          node.properties.rel = "noopener noreferrer";
+        }
+      },
+    })
     .use(rehypeStringify)
     .process(value);
 }
