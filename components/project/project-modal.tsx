@@ -35,7 +35,7 @@ export function ProjectModal({ project }: { project: Project }) {
             dangerouslySetInnerHTML={{ __html: project.description }}
           />
         ) : null}
-        <div className="flex flex-row gap-2 sm:justify-start">
+        <div className="flex flex-row flex-wrap gap-2 sm:justify-start">
           {project.builtWith?.map((builtWithKey) => {
             return <BuiltWithBadge key={builtWithKey} name={builtWithKey} />;
           })}
