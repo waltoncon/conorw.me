@@ -37,11 +37,21 @@ const createBuiltWith = <T extends string>(builtWith: Record<T, BuiltWith>) =>
   builtWith;
 
 export const builtWith = createBuiltWith({
-  vue: {
-    name: "Vue",
-    icon: SiVuedotjs,
-    color: SiVuedotjsHex,
-    url: "https://vuejs.org",
+  bun: {
+    name: "Bun",
+    icon: SiBun,
+    color: SiBunHex,
+    url: "https://bun.sh",
+  },
+  javascript: {
+    name: "JavaScript",
+    icon: SiJavascript,
+    color: SiJavascriptHex,
+  },
+  nodejs: {
+    name: "Node.JS",
+    icon: SiNodedotjs,
+    color: SiNodedotjsHex,
   },
   nuxt: {
     name: "Nuxt",
@@ -49,50 +59,17 @@ export const builtWith = createBuiltWith({
     color: SiNuxtHex,
     url: "https://nuxt.com",
   },
-  shadcnui: {
-    name: "ShadcnUI",
-    icon: SiShadcnui,
-    color: SiShadcnuiHex,
-    url: "https://ui.shadcn.com",
-  },
-  tailwindcss: {
-    name: "TailwindCSS",
-    icon: SiTailwindcss,
-    color: SiTailwindcssHex,
-    url: "https://tailwindcss.com",
-  },
-  nodejs: {
-    name: "Node.JS",
-    icon: SiNodedotjs,
-    color: SiNodedotjsHex,
-  },
-  javascript: {
-    name: "JavaScript",
-    icon: SiJavascript,
-    color: SiJavascriptHex,
-  },
-  typescript: {
-    name: "TypeScript",
-    icon: SiTypescript,
-    color: SiTypescriptHex,
-  },
-  bun: {
-    name: "Bun",
-    icon: SiBun,
-    color: SiBunHex,
-    url: "https://bun.sh",
-  },
   react: {
     name: "React",
     icon: SiReact,
     color: SiReactHex,
     url: "https://react.dev",
   },
-  vite: {
-    name: "Vite",
-    icon: SiVite,
-    color: SiViteHex,
-    url: "https://vite.dev",
+  shadcnui: {
+    name: "ShadcnUI",
+    icon: SiShadcnui,
+    color: SiShadcnuiHex,
+    url: "https://ui.shadcn.com",
   },
   surrealdb: {
     name: "SurrealDB",
@@ -100,11 +77,34 @@ export const builtWith = createBuiltWith({
     color: SiSurrealdbHex,
     url: "https://surrealdb.com",
   },
+  tailwindcss: {
+    name: "TailwindCSS",
+    icon: SiTailwindcss,
+    color: SiTailwindcssHex,
+    url: "https://tailwindcss.com",
+  },
   triggerdotdev: {
     name: "Tigger.dev",
     icon: TriggerDotDevIcon,
     color: "#41FF54",
     url: "https://trigger.dev",
+  },
+  typescript: {
+    name: "TypeScript",
+    icon: SiTypescript,
+    color: SiTypescriptHex,
+  },
+  vite: {
+    name: "Vite",
+    icon: SiVite,
+    color: SiViteHex,
+    url: "https://vite.dev",
+  },
+  vue: {
+    name: "Vue",
+    icon: SiVuedotjs,
+    color: SiVuedotjsHex,
+    url: "https://vuejs.org",
   },
 });
 
