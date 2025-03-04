@@ -37,15 +37,35 @@ const createBuiltWith = <T extends string>(builtWith: Record<T, BuiltWith>) =>
   builtWith;
 
 export const builtWith = createBuiltWith({
-  vue: { name: "Vue", icon: SiVuedotjs, color: SiVuedotjsHex },
-  nuxt: { name: "Nuxt", icon: SiNuxt, color: SiNuxtHex },
-  shadcnui: { name: "ShadcnUI", icon: SiShadcnui, color: SiShadcnuiHex },
+  vue: {
+    name: "Vue",
+    icon: SiVuedotjs,
+    color: SiVuedotjsHex,
+    url: "https://vuejs.org",
+  },
+  nuxt: {
+    name: "Nuxt",
+    icon: SiNuxt,
+    color: SiNuxtHex,
+    url: "https://nuxt.com",
+  },
+  shadcnui: {
+    name: "ShadcnUI",
+    icon: SiShadcnui,
+    color: SiShadcnuiHex,
+    url: "https://ui.shadcn.com",
+  },
   tailwindcss: {
     name: "TailwindCSS",
     icon: SiTailwindcss,
     color: SiTailwindcssHex,
+    url: "https://tailwindcss.com",
   },
-  nodejs: { name: "Node.JS", icon: SiNodedotjs, color: SiNodedotjsHex },
+  nodejs: {
+    name: "Node.JS",
+    icon: SiNodedotjs,
+    color: SiNodedotjsHex,
+  },
   javascript: {
     name: "JavaScript",
     icon: SiJavascript,
@@ -60,6 +80,7 @@ export const builtWith = createBuiltWith({
     name: "Bun",
     icon: SiBun,
     color: SiBunHex,
+    url: "https://bun.sh",
   },
   react: {
     name: "React",
