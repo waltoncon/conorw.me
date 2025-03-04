@@ -8,7 +8,7 @@ export const projectSchema = z.object({
   summary: z.string().optional(),
   description: z.string().optional(),
   href: z.string(),
-  prettyUrl: z.string(),
+  prettyUrl: z.string().optional(),
   badge: z.string().optional(),
   builtWith: z
     .custom<BuiltWithKey>(

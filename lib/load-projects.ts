@@ -29,10 +29,12 @@ export async function loadProjects() {
   for (const filePath of files) {
     const fileContent = await readFile(resolve(contentDir, filePath), "utf-8");
     const content = await parseMarkdown(fileContent);
+    const frontmatter = content.data.matter as Omit<Project, "description">;
 
     projects.push(
       projectSchema.parse({
-        ...(content.data.matter ?? {}),
+        ...frontmatter,
+        prettyUrl: frontmatter.prettyUrl ?? new URL(frontmatter.href).hostname,
         description: content.value,
       }),
     );
