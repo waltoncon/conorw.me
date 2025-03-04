@@ -1,0 +1,14 @@
+name: Utilities
+summary: A collection of client-side utilities.
+href: https://cew.sh/
+builtWith:
+  - vercel
+  - vue
+  - nuxt
+  - tailwindcss
+description: |
+  I built a collection of simple web-based tools to handle everyday technical tasks like generating hashes, converting timestamps, transforming ICS files into JSON, creating QR codes, and converting units of measurement. These tools run directly in the browser, are lightweight, and don’t require installation or sign-ups.
+
+  I made this because I often needed quick, ad-free utilities without the hassle of bloated websites or paywalls. Some tools, like hash generation and QR code creation, work entirely on the client side for privacy, while others use lightweight backend processing.
+
+  I'm continuously adding new features based on what’s useful.

@@ -1,0 +1,17 @@
+name: Cards
+href: https://cards.cew.sh
+summary: Inspired by Everdeck and Singularity Deck, this project expands playing cards into a versatile eight-suit system with a growing library of supported games.
+builtWith:
+  - vercel
+  - react
+  - nextjs
+  - shadcnui
+  - markdown
+  - drizzleorm
+  - tailwindcss
+  - typescript
+  - zod
+description: |
+  This project draws inspiration from modular card systems like [Everdeck](https://boardgamegeek.com/boardgame/291951/the-everdeck) and [Singularity Deck](https://www.singularity.games/singularity-deck), which reimagine traditional playing cards to maximize their versatility. By incorporating elements from these systems and expanding to eight suits across two French-suited decks, the goal is to create a flexible toolkit for a wide variety of games. In addition to traditional card games, it supports modern titles like Coup, Take 5, Werewolf, Love Letter, Virus, Skull, The Mind and more.
+
+  The website serves primarily as a showcase for the cards and also as a reference for the games they support. While only a few games have been added so far, the long-term vision is to grow this collection into a flexible toolkit for players looking to explore new game mechanics with a single deck.

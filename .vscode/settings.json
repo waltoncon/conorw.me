@@ -2,5 +2,8 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.sortImports": "always"
+  },
+  "yaml.schemas": {
+    "./schemas/project.schema.json": "content/*"
   }
 }
