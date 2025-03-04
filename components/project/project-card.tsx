@@ -8,13 +8,18 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { BuiltWithKey } from "@/lib/built-with";
+import Link from "next/link";
+import { ProjectModal } from "./project-modal";
 
 export interface Project {
   name: string;
-  description: string;
+  summary?: string;
+  description?: string;
   href: string;
   prettyUrl: string;
   badge?: string;
+  builtWith?: BuiltWithKey[];
 }
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -29,19 +34,21 @@ export default function ProjectCard({ project }: { project: Project }) {
         ) : null}
       </CardHeader>
       <CardContent className="flex flex-row items-baseline gap-4 p-4 py-2">
-        <CardDescription>{project.description}</CardDescription>
+        <CardDescription>{project.summary}</CardDescription>
       </CardContent>
-      <CardFooter className="p-4 pt-0">
+      <CardFooter className="flex-col p-4 pt-0">
         <Button
           asChild
           className="ml-auto justify-start"
           size="sm"
           variant="ghost"
         >
-          <a href={project.href} target="_blank">
+          <Link href={project.href} target="_blank">
             Go to {project.prettyUrl}
-          </a>
+          </Link>
         </Button>
+
+        <ProjectModal project={project}></ProjectModal>
       </CardFooter>
     </Card>
   );

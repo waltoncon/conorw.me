@@ -6,17 +6,19 @@ import { MessageSquareIcon } from "lucide-react";
 const projects: Project[] = [
   {
     name: "Utilities",
-    description: "A collection of client-side utilities.",
+    summary: "A collection of client-side utilities.",
     href: "https://www.cew.sh/",
     prettyUrl: "cew.sh",
+    builtWith: ["vue", "nuxt"],
   },
   {
     name: "Doclet",
-    description:
+    summary:
       "View documentation offline. Built with Vite, React, and SurrealDB.",
     href: "https://doclet.cew.sh",
     prettyUrl: "doclet-app.vercel.app",
     badge: "pre-alpha",
+    builtWith: ["react", "vite", "surrealdb", "triggerdotdev"],
   },
 ];
 
